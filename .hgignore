@@ -1,0 +1,13 @@
+syntax: glob
+*.sw[op]
+*.orig
+db/
+dbd/
+O.linux-x86_64/
+O.Common/
+envPaths
+bin/
+sncExample.stt
+records.dbl
+
+syntax: regexp

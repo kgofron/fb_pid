@@ -1,0 +1,5 @@
+NAME=pid
+PORT=4027
+HOST=xf03idc-ioc1
+USER=softioc
+CHDIR="$CHDIR/iocBoot/iocpid"
