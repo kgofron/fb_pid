@@ -10,7 +10,7 @@ include $(TOP)/configure/CONFIG
 #----------------------------------------------------
 # Create and install (or just install) into <top>/db
 # databases, templates, substitutions like this
-DB += pid.db
+DB += pid.db fb_epid.db
 
 #----------------------------------------------------
 # If <anyname>.db template is not named <anyname>*.template add

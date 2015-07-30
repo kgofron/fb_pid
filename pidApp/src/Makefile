@@ -29,6 +29,7 @@ pid_LIBS += seq
 pid_LIBS += autosave
 pid_LIBS += calc
 pid_LIBS += std
+pid_LIBS += busy
 
 pid_LIBS += devIocStats
 pid_LIBS += caPutLog

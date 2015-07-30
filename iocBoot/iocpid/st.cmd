@@ -28,6 +28,15 @@ dbLoadRecords("$(TOP)/db/pid.db", "Sys=$(SYS),Dev=$(DEV),PREC=3,INP=$(SYS)$(DEV)
 epicsEnvSet("DEV", "{Pid:04}")
 dbLoadRecords("$(TOP)/db/pid.db", "Sys=$(SYS),Dev=$(DEV),PREC=3,INP=$(SYS)$(DEV)input_,OUT=$(SYS)$(DEV)output_")
 
+epicsEnvSet("DEV", "{FbPid:01}")
+dbLoadRecords("$(TOP)/db/fb_epid.db", "Sys=$(SYS),Dev=$(DEV),PID=PID,PREC=3,IN=$(SYS)$(DEV):input_,OUT=$(SYS)$(DEV):output_,MODE=PID,CALC=A,PERMIT1=,PERMIT2=,PERMIT3=,PERMIT4=")
+epicsEnvSet("DEV", "{FbPid:02}")
+dbLoadRecords("$(TOP)/db/fb_epid.db", "Sys=$(SYS),Dev=$(DEV),PID=PID,PREC=3,IN=$(SYS)$(DEV):input_,OUT=$(SYS)$(DEV):output_,MODE=PID,CALC=A,PERMIT1=,PERMIT2=,PERMIT3=,PERMIT4=")
+epicsEnvSet("DEV", "{FbPid:03}")
+dbLoadRecords("$(TOP)/db/fb_epid.db", "Sys=$(SYS),Dev=$(DEV),PID=PID,PREC=3,IN=$(SYS)$(DEV):input_,OUT=$(SYS)$(DEV):output_,MODE=PID,CALC=A,PERMIT1=,PERMIT2=,PERMIT3=,PERMIT4=")
+epicsEnvSet("DEV", "{FbPid:04}")
+dbLoadRecords("$(TOP)/db/fb_epid.db", "Sys=$(SYS),Dev=$(DEV),PID=PID,PREC=3,IN=$(SYS)$(DEV):input_,OUT=$(SYS)$(DEV):output_,MODE=PID,CALC=A,PERMIT1=,PERMIT2=,PERMIT3=,PERMIT4=")
+
 dbLoadRecords("$(EPICS_BASE)/db/save_restoreStatus.db", "P=$(IOC_P)")
 
 cd ${TOP}/
