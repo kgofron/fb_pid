@@ -50,6 +50,7 @@ set_requestfile_path("$(EPICS_BASE)/as/req")
 set_requestfile_path("${TOP}/as/req")
 
 set_pass0_restoreFile("ioc_settings.sav")
+set_pass1_restoreFile("ioc_settings.sav")
 
 iocInit()
 

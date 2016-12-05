@@ -105,7 +105,7 @@ grecord(epid, "$(Sys)$(Dev)$(PID)") {
     field(DRVH, "0")
     field(EGU,  "feedback")
     field(PREC, "$(PREC)")
-    info(autosaveFields_pass0, "DESC INP OUTL SCAN KP KI KD LOPR HOPR DRVL DRVH PREC STPL EGU")
+    info(autosaveFields_pass0, "DESC EGU PREC SCAN VAL DRVL DRVH FMOD KP KI KD I")
 }
    #
    # Input calculation to the epid record
@@ -120,7 +120,7 @@ grecord(swait, "$(Sys)$(Dev)$(PID):in") {
     field(CALC, "A")
     field(INAN, "$(IN)")
     field(INAP, "1")
-    info(autosaveFields_pass0, "DESC INAN")
+    info(autosaveFields_pass0, "DESC A B C D E F G H I J K L INAN INBN INCN INDN INEN INFN INGN INHN ININ INJN INKN INLN INAP INBP INCP INDP INEP INFP INGP INHP INIP INJP INKP INLP CALC$ OUTN OOPT DOPT DOLN SCAN ODLY PREC OEVT FLNK")
 }
 #
 # Output buffer from epid record
@@ -139,6 +139,7 @@ grecord(swait, "$(Sys)$(Dev)$(PID):obuf") {
     field(INBP, "1")
     field(INCN, "$(Sys)$(Dev)$(PID):obuf.VAL")
     field(INCP, "1")
+    info(autosaveFields_pass0, "DESC A B C D E F G H I J K L INAN INBN INCN INDN INEN INFN INGN INHN ININ INJN INKN INLN INAP INBP INCP INDP INEP INFP INGP INHP INIP INJP INKP INLP CALC$ OUTN OOPT DOPT DOLN SCAN ODLY PREC OEVT FLNK")
 }
 
 #
@@ -159,6 +160,7 @@ grecord(swait, "$(Sys)$(Dev)$(PID):out") {
     field(INAN, "$(Sys)$(Dev)$(PID):obuf.VAL")
     field(INAP, "1")
     field(OUTN, "$(OUT)")
+    info(autosaveFields_pass0, "DESC A B C D E F G H I J K L INAN INBN INCN INDN INEN INFN INGN INHN ININ INJN INKN INLN INAP INBP INCP INDP INEP INFP INGP INHP INIP INJP INKP INLP CALC$ OUTN OOPT DOPT DOLN SCAN ODLY PREC OEVT FLNK")
 }
 
 #
@@ -177,7 +179,7 @@ grecord(sseq, "$(Sys)$(Dev)$(PID):outpv") {
     field(DOL1, "$(Sys)$(Dev)$(PID):out.OUTN")
     field(DLY1, "0")
     field(LNK1, "$(Sys)$(Dev)$(PID):resume.INBN")
-    info(autosaveFields_pass0, "DESC VAL")
+    info(autosaveFields_pass0, "DESC A B C D E F G H I J K L INAN INBN INCN INDN INEN INFN INGN INHN ININ INJN INKN INLN INAP INBP INCP INDP INEP INFP INGP INHP INIP INJP INKP INLP CALC$ OUTN OOPT DOPT DOLN SCAN ODLY PREC OEVT FLNK")
 }
 grecord(swait, "$(Sys)$(Dev)$(PID):resume") {
     field(DESC, "EPID feedback input")
@@ -194,8 +196,7 @@ grecord(swait, "$(Sys)$(Dev)$(PID):resume") {
     field(INDP, "1")
     field(OOPT, "On Change")
     field(OUTN, "$(Sys)$(Dev)$(PID).I")
-
-    info(autosaveFields_pass0, "DESC VAL")
+    info(autosaveFields_pass0, "DESC A B C D E F G H I J K L INAN INBN INCN INDN INEN INFN INGN INHN ININ INJN INKN INLN INAP INBP INCP INDP INEP INFP INGP INHP INIP INJP INKP INLP CALC$ OUTN OOPT DOPT DOLN SCAN ODLY PREC OEVT FLNK")
 }
 
 #
@@ -212,7 +213,9 @@ grecord(bo, "$(Sys)$(Dev)$(PID):on")
     field(DESC, "off/on")
     field(ZNAM, "off")
     field(ONAM, "on")
+    info(autosaveFields_pass0, "VAL")
 }
+
 grecord(swait, "$(Sys)$(Dev)$(PID):enable") {
     field(DESC, "EPID feedback permit")
     field(PREC, "5")
@@ -231,7 +234,7 @@ grecord(swait, "$(Sys)$(Dev)$(PID):enable") {
     field(OOPT, "On Change")
     # drive the epid FBON field
     field(OUTN, "$(Sys)$(Dev)$(PID).FBON")
-    info(autosaveFields_pass0, "DESC CALC INBN INCN INDN INEN")
+    info(autosaveFields_pass0, "DESC A B C D E F G H I J K L INAN INBN INCN INDN INEN INFN INGN INHN ININ INJN INKN INLN INAP INBP INCP INDP INEP INFP INGP INHP INIP INJP INKP INLP CALC$ OUTN OOPT DOPT DOLN SCAN ODLY PREC OEVT FLNK")
 }
 
 record(ai, "$(Sys)$(Dev)$(PID):input_") {
