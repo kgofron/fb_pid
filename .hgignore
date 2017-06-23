@@ -9,5 +9,5 @@ envPaths
 bin/
 sncExample.stt
 records.dbl
-
+as/
 syntax: regexp

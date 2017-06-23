@@ -179,7 +179,7 @@ grecord(sseq, "$(Sys)$(Dev)$(PID):outpv") {
     field(DOL1, "$(Sys)$(Dev)$(PID):out.OUTN")
     field(DLY1, "0")
     field(LNK1, "$(Sys)$(Dev)$(PID):resume.INBN")
-    info(autosaveFields_pass0, "DESC A B C D E F G H I J K L INAN INBN INCN INDN INEN INFN INGN INHN ININ INJN INKN INLN INAP INBP INCP INDP INEP INFP INGP INHP INIP INJP INKP INLP CALC$ OUTN OOPT DOPT DOLN SCAN ODLY PREC OEVT FLNK")
+    info(autosaveFields_pass0, "DESC DOL1 DLY1 LNK1")
 }
 grecord(swait, "$(Sys)$(Dev)$(PID):resume") {
     field(DESC, "EPID feedback input")
