@@ -2,13 +2,13 @@
 
 < envPaths
 
-epicsEnvSet("ENGINEER",  "Yong HU x3961")
-epicsEnvSet("LOCATION",  "740 3IDC RG-C1")
+epicsEnvSet("ENGINEER",  "Beamline Control")
+epicsEnvSet("LOCATION",  "743 5IDD RG-C1")
 
 epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "NO")
-epicsEnvSet("EPICS_CA_ADDR_LIST", "10.3.0.255")
+epicsEnvSet("EPICS_CA_ADDR_LIST", "10.5.0.255")
 
-epicsEnvSet("SYS", "XF:03IDC-CT")
+epicsEnvSet("SYS", "XF:05IDD-CT")
 # epicsEnvSet("IOCNAME", "pid") # set by softioc init.d script
 epicsEnvSet("IOC_P", "$(SYS){IOC:$(IOCNAME)}")
 
