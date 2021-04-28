@@ -1,5 +1,11 @@
 NAME=pid
-PORT=4177
-HOST=xf05idd-ioc1
+PORT=5084
+HOST=xf05ida-ioc1
 USER=softioc
 CHDIR="$CHDIR/iocBoot/iocpid"
+
+#NAME=pid
+#PORT=4177
+#HOST=xf05idd-ioc1
+#USER=softioc
+#CHDIR="$CHDIR/iocBoot/iocpid"

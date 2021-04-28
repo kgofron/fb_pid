@@ -1,12 +1,11 @@
 #!../../bin/linux-x86_64/pid
 
 < envPaths
+< /epics/common/xf05ida-ioc1-netsetup.cmd
 
 epicsEnvSet("ENGINEER",  "Beamline Control")
 epicsEnvSet("LOCATION",  "743 5IDD RG-C1")
 
-epicsEnvSet("EPICS_CA_AUTO_ADDR_LIST", "NO")
-epicsEnvSet("EPICS_CA_ADDR_LIST", "10.5.0.255")
 
 epicsEnvSet("SYS", "XF:05IDD-CT")
 # epicsEnvSet("IOCNAME", "pid") # set by softioc init.d script
