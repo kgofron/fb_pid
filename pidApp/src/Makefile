@@ -19,10 +19,13 @@ pid_DBD += base.dbd
 pid_DBD += seqRecord.dbd mbboRecord.dbd
 pid_DBD += system.dbd
 pid_DBD += asSupport.dbd
+pid_DBD += sscanSupport.dbd
 pid_DBD += calcSupport.dbd
+#pid_DBD += sscan.dbd
 pid_DBD += devIocStats.dbd
 pid_DBD += caPutLog.dbd
 pid_DBD += stdSupport.dbd
+#pid_DBD += menuScan.dbd
 
 # Add all the support libraries needed by this IOC
 pid_LIBS += seq
@@ -30,9 +33,14 @@ pid_LIBS += autosave
 pid_LIBS += calc
 pid_LIBS += std
 pid_LIBS += busy
+pid_LIBS += sscan
 
 pid_LIBS += devIocStats
 pid_LIBS += caPutLog
+
+# Channel Finder
+pid_DBD  += reccaster.dbd
+pid_LIBS += reccaster
 
 # pid_registerRecordDeviceDriver.cpp derives from pid.dbd
 pid_SRCS += pid_registerRecordDeviceDriver.cpp
